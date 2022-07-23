@@ -1,0 +1,36 @@
+{
+  "name": "minkowski-island-cli",
+  "version": "1.0.0",
+  "description": "Print the Minkowski Island to the console!",
+  "main": "./src/index.js",
+  "bin": {
+    "minkowski-island-cli": "./src/cli.js"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spirometaxas/minkowski-island-cli.git"
+  },
+  "scripts": {
+    "cli": "node ./src/cli.js"
+  },
+  "author": "Spiro Metaxas",
+  "license": "MIT",
+  "keywords": [
+    "Minkowski",
+    "Minkowski Island",
+    "fractal",
+    "fractals",
+    "minkowski-island-cli",
+    "cli",
+    "console",
+    "terminal",
+    "shell",
+    "unicode"
+  ],
+  "dependencies": {
+    "minkowski-sausage-cli": "^1.1.0"
+  }
+}
