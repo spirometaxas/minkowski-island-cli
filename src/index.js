@@ -33,7 +33,7 @@ const addToBoard = function(board, part, pos) {
   }
 }
 
-const create = function(n) {
+const create = function(n, inverse=false) {
   if (n === undefined || isNaN(n) || n < 0) {
     return '';
   }
@@ -49,10 +49,10 @@ const create = function(n) {
     return draw(board);
   }
 
-  const rightBoard = minkowski_sausage.minkowski(n, 'right', { end1: 'down', end2: 'down' });
-  const downBoard = minkowski_sausage.minkowski(n, 'down', { end1: 'left', end2: 'left' });
-  const leftBoard = minkowski_sausage.minkowski(n, 'left', { end1: 'up', end2: 'up' });
-  const upBoard = minkowski_sausage.minkowski(n, 'up', { end1: 'right', end2: 'right' });
+  const rightBoard = minkowski_sausage.minkowski(n, 'right', { end1: 'down', end2: 'down' }, inverse);
+  const downBoard = minkowski_sausage.minkowski(n, 'down', { end1: 'left', end2: 'left' }, inverse);
+  const leftBoard = minkowski_sausage.minkowski(n, 'left', { end1: 'up', end2: 'up' }, inverse);
+  const upBoard = minkowski_sausage.minkowski(n, 'up', { end1: 'right', end2: 'right' }, inverse);
 
   const w = rightBoard[0].length + upBoard[0].length - 1;
   const h = upBoard.length + rightBoard.length - 1;
